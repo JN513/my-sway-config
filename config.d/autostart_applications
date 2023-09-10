@@ -1,0 +1,6 @@
+#notification
+exec mako
+
+# gtk app problem solver
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY WAYSOCK
+

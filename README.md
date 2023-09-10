@@ -1,0 +1,1 @@
+# Minhas configurações do SWAY
