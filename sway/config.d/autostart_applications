@@ -4,3 +4,6 @@ exec mako
 # gtk app problem solver
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY WAYSOCK
 
+# polkit agent
+
+exec "/usr/lib/polkit-kde-authentication-agent-1"
