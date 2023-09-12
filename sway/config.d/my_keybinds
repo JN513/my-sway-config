@@ -29,8 +29,8 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
 # Screenshot
 
-bindsym $mod+F10 exec /home/julio/bin/geometric_screenshot.sh
-bindsym Print exec /home/julio/bin/geometric_screenshot.sh
+bindsym $mod+F10 exec $HOME/bin/geometric_screenshot.sh
+bindsym Print exec $HOME/bin/geometric_screenshot.sh
 
-bindsym $mod+Shift+F10 exec /home/julio/bin/screen_screenshot.sh
-bindsym Shift+Print exec /home/julio/bin/screen_screenshot.sh
+bindsym $mod+Shift+F10 exec $HOME/bin/screen_screenshot.sh
+bindsym Shift+Print exec $HOME/bin/screen_screenshot.sh
