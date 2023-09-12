@@ -21,7 +21,7 @@
 Arch:
 
 ```bash
-sudo pacman -S sway swaybg swayidle swayimg swaylock rofi alacritty wybar grim slurp polkit-kde-agent sddm
+sudo pacman -S sway swaybg swayidle swayimg swaylock rofi alacritty waybar grim slurp polkit-kde-agent sddm
 ```
 
 Ativando sddm como display manager padrão:
