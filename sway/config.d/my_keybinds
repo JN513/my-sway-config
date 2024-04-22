@@ -1,5 +1,7 @@
 # My bynds
 
+bindsym $mod+p exec '$lock'
+
 bindsym $mod+F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute
 bindsym $mod+F2 exec pactl set-sink-volume @DEFAULT_SINK@ -5% # down
 bindsym $mod+F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5% #up
@@ -17,7 +19,7 @@ bindsym Mod1+F4+Right exec playerctl next # Musica anterior
 
 bindsym XF86AudioPlay exec playerctl play-pause # Pausa e continua musica
 
-bindsym $mod+Shift+m exec poweroff
+bindsym $mod+Shift+m exec shutdown now
 
 # Brilho da tela
 
@@ -29,8 +31,8 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
 # Screenshot
 
-bindsym $mod+F10 exec $HOME/bin/geometric_screenshot.sh
-bindsym Print exec $HOME/bin/geometric_screenshot.sh
+bindsym $mod+F10 exec /home/julio/.bin/geometric_screenshot.sh
+bindsym Print exec /home/julio/.bin/geometric_screenshot.sh
 
-bindsym $mod+Shift+F10 exec $HOME/bin/screen_screenshot.sh
-bindsym Shift+Print exec $HOME/bin/screen_screenshot.sh
+bindsym $mod+Shift+F10 exec /home/julio/.bin/screen_screenshot.sh
+bindsym Shift+Print exec /home/julio/.bin/screen_screenshot.sh

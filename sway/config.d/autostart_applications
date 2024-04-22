@@ -7,3 +7,31 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY WAYSOC
 # polkit agent
 
 exec "/usr/lib/polkit-kde-authentication-agent-1"
+
+exec "/usr/lib/xdg-desktop-portal -r"
+
+exec "/usr/lib/xdg-desktop-portal-wlr -r"
+
+# swaylock
+
+set $lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
+#exec swayidle -w \
+#    timeout 600 $lock \
+#    timeout 570 'swaymsg "output * dpms off"' \
+#    resume 'swaymsg "output * dpms on"' \
+#    before-sleep $lock
+
+# era 300 pra testar coloquei 50, 600 tbm
+
+exec swayidle -w \
+         timeout 300 '$lock' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep '$lock'
+
+
+exec initctl set-env --global SWAYSOCK="$SWAYSOCK"
+exec initctl set-env --global I3SOCK="$I3SOCK"
+exec initctl set-env --global WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
+# include only if xwayland is enabled and startup jobs need to access X
+exec initctl set-env --global DISPLAY="$DISPLAY"
+exec initctl emit sway-session
